@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DXB XP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<style type="text/css">
+	.card-columns {
+		@include media-breakpoint-only(md) {
+			column-count: 3;
+		}
+		@include media-breakpoint-only(xl) {
+			column-count: 5;
+		}
+	}
+
+</style>
+</head>
+<body style="margin-bottom: 20px; padding-top: 4.5rem">
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Customize</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="./mock.html">DXB XP</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+			</ul>
+		</div>
+	</nav>
+	<main role="main" class="container">
+		<div class="alert alert-primary" role="alert">
+			It took <strong> 5 seconds </strong> to get this information.  <a href="#">View Request</a> | <a href="#">View Response</a>
+		</div>
+		<div class="row">
+			<!-- Shopping Cart -->
+			<div class="col-md-4 order-md-2 mb-4">
+				<h4 class="d-flex justify-content-between align-items-center mb-3">
+					<span class="text-muted">Your cart</span>
+					<span class="badge badge-secondary badge-pill">3</span>
+				</h4>
+				<ul class="list-group mb-3">
+					<li class="list-group-item d-flex justify-content-between lh-condensed">
+						<div>
+							<h6 class="my-0">JW Marriott Marquis Hotel Dubai</h6>
+							<small class="text-muted">Hotel
+								<a href="#">Edit</a>
+								<a href="#">Delete</a>
+							</small>
+						</div>
+						<span class="text-muted">$120</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between lh-condensed">
+						<div>
+							<h6 class="my-0">Van Gogh Alive – The Experience</h6>
+							<small class="text-muted">Event
+								<a href="#">Edit</a>
+								<a href="#">Delete</a>
+							</small>
+						</div>
+						<span class="text-muted">$80</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between lh-condensed">
+						<div>
+							<h6 class="my-0">Steps Live at Dubai Opera</h6>
+							<small class="text-muted">Event
+								<a href="#">Edit</a>
+								<a href="#">Delete</a>
+							</small>
+						</div>
+						<span class="text-muted">$50</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between bg-light">
+						<div class="text-success">
+							<h6 class="my-0">Discount</h6>
+							<small>Dubai Experience</small>
+						</div>
+						<span class="text-success">-$35</span>
+					</li>
+					<li class="list-group-item d-flex justify-content-between">
+						<span>Total (USD)</span>
+						<strong>$215</strong>
+					</li>
+				</ul>
+
+				<div class="row mb-3">
+					<div class="col-md-12">
+						<a href="./purchased.html" role="button" class="btn btn-primary pull-right">Purchase</a>
+					</div>
+				</div>
+
+				<!-- Instructions -->
+				<div class="card bg-light">
+					<div class="card-body">
+						<h5 class="card-title">Usage</h5>
+						<p class="card-text">
+							This page displays details of the selected offer.  Users can view and modify hotel, activity, and transport options.  
+
+							As users modify their options the shopping cart is updated with pricing information.
+						</p>
+						<p class="card-text">
+							To continue, click the <strong>purchase</strong> buttons under the shopping cart.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+
+
+			<!-- Main Content -->
+			<div class="col-md-8 order-md-1">
+				<h2>Customize</h2>
+				<!-- Special Offer -->
+				<h3>Hotels</h3>
+				<div class="card-group">
+					<div class="card">
+						<img class="card-img-top" src="holder.js/100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">JW Marriott Marquis Hotel Dubai</h5>
+							<p class="card-text">
+								<ul class="fa-ul">
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>24 hour guarantee</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>2 adults</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>Breakfast included</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>Package pricing</li>
+									<li><span class="fa-li"><i class="fa fa-calendar"></i></span>Jan 2 - 4</li>
+								</ul>
+							</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<button class="btn btn-disabled"><i class="fa fa-check-circle"></i> Added to experience</button>
+							</small>
+						</div>
+					</div>
+					<div class="card">
+						<img class="card-img-top" src="holder.js/100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Atlantis The Palm Dubai</h5>
+							<p class="card-text">
+								<ul class="fa-ul">
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>24 hour guarantee</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>2 adults</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>Breakfast included</li>
+									<li><span class="fa-li"><i class="fa fa-calendar"></i></span>Jan 2 - 4</li>
+								</ul>
+							</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<button class="btn btn-primary"> Add for +50 USD</button>
+							</small>
+						</div>
+					</div>
+					<div class="card">
+						<img class="card-img-top" src="holder.js/100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Jumeirah Beach Hotel</h5>
+							<p class="card-text">
+								<ul class="fa-ul">
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>24 hour guarantee</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>2 adults</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>Breakfast included</li>
+									<li><span class="fa-li"><i class="fa fa-check-circle"></i></span>Package pricing</li>
+									<li><span class="fa-li"><i class="fa fa-calendar"></i></span>Jan 2 - 4</li>
+								</ul>
+							</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<button class="btn btn-primary"> Add to experience</button>
+							</small>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="mt-3">Activities</h3>
+				<div class="card-group">
+					<div class="card">
+						<img class="card-img-top" src="holder.js/100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title"> Van Gogh Alive – The Experience</h5>
+							<p class="card-text">Van Gogh Alive – The Experience is an acclaimed art exhibition showcasing works by the Dutch painter Vincent van Gogh.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<button class="btn btn-disabled"><i class="fa fa-check-circle"></i> Added to experience</button>
+							</small>
+						</div>
+					</div>
+					<div class="card">
+						<img class="card-img-top" src="holder.js/100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Steps Live at Dubai Opera</h5>
+							<p class="card-text">On 3 Jan, 90s pop band Steps will take to the stage at Dubai Opera for one night only. </p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<button class="btn btn-disabled"><i class="fa fa-check-circle"></i> Added to experience</button>
+							</small>
+						</div>
+					</div>
+					<div class="card">
+						<img class="card-img-top" src="holder.js/100px180/" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Spamalot at Dubai Opera</h5>
+							<p class="card-text">The critically acclaimed musical Spamalot will be at Dubai Opera from 2-5 Jan</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								<button class="btn btn-primary"> Add for +70 USD</button>
+							</small>
+						</div>
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$('input[name="daterange"]').daterangepicker({
+				autoUpdateInput: false,
+				locale: {
+					cancelLabel: 'Clear'
+				}
+			});
+
+			$('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+				$(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+			});
+
+			$('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
+				$(this).val('');
+			});
+
+		});
+	</script>
+</body>
+</html>

@@ -34,7 +34,7 @@
 	<main role="main" class="container">
 		<div class="row">
 			<!-- Instructions -->
-			<div class="col-md-4 order-md-2 mb-4">
+			<div class="col-md-12 order-md-2 mb-4">
 				<div class="card bg-light">
 					<div class="card-body">
 						<h5 class="card-title">Usage</h5>
@@ -42,7 +42,7 @@
 							This page allows users to send custom data to the vendor to simulate scenarios.  
 						</p>
 						<p class="card-text">
-							The connections tab simulates data that will be sent for the connections scenario (i.e. when a user has searched for a flight with a connection in Dubai, or when a user has a booking with a flight with a connection in Dubai).
+							Real flight data should be sent so the vendor can determine when the flight is arriving in DXB from the GDS.
 						</p>
 						<p class="card-text">
 							To continue, click the <strong>submit</strong> button at the bottom of the page.  Note that:
@@ -55,91 +55,139 @@
 				</div>
 			</div>
 			<!-- Main Content -->
-			<div class="col-md-8 order-md-1">
+			<div class="col-md-12 order-md-1 mb-3">
 				<h2>Mock Data</h2>
 				<!-- Forms -->
-				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<!-- 				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 					<li class="nav-item">
 						<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Connections</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Destination Dubai</a>
 					</li>
-				</ul>
+				</ul> -->
 				<div class="tab-content" id="pills-tabContent">
 					<!-- Connections Form -->
 					<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 						<div class="row">
 							<div class="col">
 								<form class="need-validation" novalidate>
-									<div class="form-row mb-3">
-										<div class="col-md-6">
-											<label>Outbound</label>
-											<input type="text" class="form-control" placeholder="Arriving in DXB" name="connection-ob-daterange" value="" />
-											<div class="invalid-feedback">
-												Date range is required
-											</div>
+									<div class="form-row mt-3 mb-4 align-items-center">
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Point of Sale (LHR)"></input>
 										</div>
-										<div class="col-md-6">
-											<label>Inbound</label>
-											<input type="text" class="form-control" placeholder="Arriving in DXB" name="connection-ib-daterange" value="" />
-											<div class="invalid-feedback">
-												Date range is required
-											</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+											<label class="form-check-label" for="defaultCheck1">
+												Ticketed
+											</label>
 										</div>
-									</div>
-									<div class="form-row mb-3">
-										
 									</div>
 									<div class="form-row">
-										<div class="col-md-4">
-											<div class="form-group">
-												<select id="inputState" class="form-control">
-													<option selected>Adults</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-												</select>
+										<h4>Segments</h4>
+									</div>
+									<div class="form-row mb-3">
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Origin (LHR)"></input>
+										</div>
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Destination (DXB)"></input>
+										</div>
+										<div class="col-md-2">
+											<input type="text" class="form-control" placeholder="Departure datetime" name="connection-ob-daterange" value="" />
+											<div class="invalid-feedback">
+												Date range is required
 											</div>
 										</div>
-										<div class="col-md-4">
-											<div class="form-group">
-												<select id="inputState" class="form-control">
-													<option selected>Children</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-												</select>
+										<div class="col-md-2">
+											<input type="text" class="form-control" placeholder="Arrival datetime" name="connection-ib-daterange" value="" />
+											<div class="invalid-feedback">
+												Date range is required
 											</div>
 										</div>
-										<div class="col-md-4">
-											<div class="form-group">
-												<select id="inputState" class="form-control">
-													<option selected>Infants</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-												</select>
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="RBD (O)"></input>
+										</div>
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Fare Brand (Eco Flex)"></input>
+										</div>
+									</div>
+									<div class="form-row ">
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Origin (LHR)"></input>
+										</div>
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Destination (DXB)"></input>
+										</div>
+										<div class="col-md-2">
+											<input type="text" class="form-control" placeholder="Departure datetime" name="connection-ob-daterange" value="" />
+											<div class="invalid-feedback">
+												Date range is required
 											</div>
 										</div>
+										<div class="col-md-2">
+											<input type="text" class="form-control" placeholder="Arrival datetime" name="connection-ib-daterange" value="" />
+											<div class="invalid-feedback">
+												Date range is required
+											</div>
+										</div>
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="RBD (O)"></input>
+										</div>
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Fare Brand (Eco Flex)"></input>
+										</div>
+									</div>
+									<div class="form-row mb-3">
+										<button class="btn btn-link pull-right">+ Add segment</button>
+									</div>
+									<div class="form-row">
+										<h4>Passengers</h4>
+									</div>
+									<div class="form-row mb-3">
+										<div class="col-md-1">
+												<select id="inputState" class="form-control">
+													<option selected>Adult</option>
+													<option>Teenager</option>
+													<option>Child</option>
+													<option>Infant</option>
+												</select>
+										</div>
+										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+										</div>
+										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+										</div>
+										<div class="col-md-3">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Frequent Flier #">
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="col-md-1">
+												<select id="inputState" class="form-control">
+													<option selected>Adult</option>
+													<option>Teenager</option>
+													<option>Child</option>
+													<option>Infant</option>
+												</select>
+										
+										</div>
+										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+										</div>
+										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+										</div>
+										<div class="col-md-3">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Frequent Flier #">
+										</div>
+									</div>
+									<div class="form-row mb-3">
+										<button class="btn btn-link pull-right">+ Add passenger</button>
+									</div>
+									<div class="form-row">
+										<h4>Other</h4>
 									</div>
 									<div class="form-row">
 										<div class="form-group">
@@ -182,16 +230,6 @@
 										</div>
 									</div>
 									<div class="form-row mb-3">
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Origin</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. LHR">
-										</div>
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Destination</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. KWI">
-										</div>
-									</div>
-									<div class="form-row mb-3">
 										<div class="form-check">
 											<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
 											<label class="form-check-label" for="defaultCheck1">
@@ -201,15 +239,18 @@
 									</div>
 									
 									<div class="form-row mb-3">
+<!-- 										
+										Currency determined by POS
 										<div class="col-md-4">
 											<label for="exampleFormControlInput1">Currency</label>
 											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. GBP">
 										</div>
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Language</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. AE-ar">
+ -->										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Language e.g. AE-ar">
 										</div>
 									</div>
+									<!-- 
+										Highest Tier and Cabin determined by Segments and FFP number
 									<div class="form-row">
 										<div class="col-md-4">
 											<div class="form-group">
@@ -234,7 +275,7 @@
 												</select>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<a href="./offer_results.html" class="btn btn-primary pull-right" role="button">Submit</a>
 								</form>
 							</div>
@@ -242,7 +283,7 @@
 					</div>
 
 					<!-- Stopover Form -->
-					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					<!-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 						<div class="row">
 							<div class="col">
 								<form class="need-validation" novalidate>
@@ -402,7 +443,7 @@
 								</form>
 							</div>
 						</div>	
-					</div>
+					</div> -->
 				</div>			
 			</div>
 		</div>

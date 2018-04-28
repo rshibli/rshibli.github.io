@@ -49,18 +49,18 @@
 			</div>
 			<!-- Main Content -->
 			<div class="col-md-12 order-md-1 mb-3">
-				<h2>Mock Data</h2>
+				<h2 class="mb-4">Mock Data</h2>
 				<!-- Forms -->
-<!-- 				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 					<li class="nav-item">
-						<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Connections</a>
+						<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">With Flight Info</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Destination Dubai</a>
+						<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Without Flight Info</a>
 					</li>
-				</ul> -->
+				</ul>
 				<div class="tab-content" id="pills-tabContent">
-					<!-- Connections Form -->
+					<!-- With Flight Info Form -->
 					<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 						<div class="row">
 							<div class="col">
@@ -276,68 +276,75 @@
 						</div>	
 					</div>
 
-					<!-- Stopover Form -->
-					<!-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-						<div class="row">
+					<!-- Without Flight Info Form -->
+					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+												<div class="row">
 							<div class="col">
 								<form class="need-validation" novalidate>
+									<div class="form-row">
+										<h4>Dates in Dubai</h4>
+									</div>
 									<div class="form-row mb-3">
-										<div class="col-md-6">
-											<input type="text" class="form-control" placeholder="Dates in DXB" name="daterange" value="" />
+										<div class="col-md-2">
+											<input type="text" class="form-control" placeholder="Arrives" name="connection-ob-daterange" value="" />
+											<div class="invalid-feedback">
+												Date range is required
+											</div>
+										</div>
+										<div class="col-md-2">
+											<input type="text" class="form-control" placeholder="Departs" name="connection-ob-daterange" value="" />
 											<div class="invalid-feedback">
 												Date range is required
 											</div>
 										</div>
 									</div>
 									<div class="form-row">
-										<div class="col-md-4">
-											<div class="form-group">
-												<select id="inputState" class="form-control">
-													<option selected>Adults</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-												</select>
-											</div>
+										<h4>Passengers</h4>
+									</div>
+									<div class="form-row mb-3">
+										<div class="col-md-1">
+											<select id="inputState" class="form-control">
+												<option selected>Adult</option>
+												<option>Teenager</option>
+												<option>Child</option>
+												<option>Infant</option>
+											</select>
 										</div>
 										<div class="col-md-4">
-											<div class="form-group">
-												<select id="inputState" class="form-control">
-													<option selected>Children</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-												</select>
-											</div>
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
 										</div>
 										<div class="col-md-4">
-											<div class="form-group">
-												<select id="inputState" class="form-control">
-													<option selected>Infants</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-													<option>7</option>
-													<option>8</option>
-													<option>9</option>
-												</select>
-											</div>
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
 										</div>
+										<div class="col-md-3">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Frequent Flier #">
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="col-md-1">
+											<select id="inputState" class="form-control">
+												<option selected>Adult</option>
+												<option>Teenager</option>
+												<option>Child</option>
+												<option>Infant</option>
+											</select>
+
+										</div>
+										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+										</div>
+										<div class="col-md-4">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+										</div>
+										<div class="col-md-3">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Frequent Flier #">
+										</div>
+									</div>
+									<div class="form-row mb-3">
+										<button class="btn btn-link pull-right">+ Add passenger</button>
+									</div>
+									<div class="form-row">
+										<h4>Other</h4>
 									</div>
 									<div class="form-row">
 										<div class="form-group">
@@ -380,16 +387,6 @@
 										</div>
 									</div>
 									<div class="form-row mb-3">
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Origin</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. LHR">
-										</div>
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Destination</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. KWI">
-										</div>
-									</div>
-									<div class="form-row mb-3">
 										<div class="form-check">
 											<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
 											<label class="form-check-label" for="defaultCheck1">
@@ -397,17 +394,23 @@
 											</label>
 										</div>
 									</div>
-
+									
 									<div class="form-row mb-3">
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Currency</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. GBP">
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Channel"></input>
 										</div>
-										<div class="col-md-4">
-											<label for="exampleFormControlInput1">Language</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e.g. AE-ar">
+										<div class="col-md-2">
+											<input class="form-control" type="text" placeholder="Point of Sale (LHR)"></input>
+										</div>
+										<div class="col-md-2">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Currency e.g. GBP">
+										</div>
+										<div class="col-md-2">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Language e.g. AE-ar">
 										</div>
 									</div>
+									<!-- 
+										Highest Tier and Cabin determined by Segments and FFP number
 									<div class="form-row">
 										<div class="col-md-4">
 											<div class="form-group">
@@ -432,12 +435,12 @@
 												</select>
 											</div>
 										</div>
-									</div>
-									<a href="./detail_results.html" class="btn btn-primary pull-right" role="button">Submit</a>
+									</div> -->
+									<a href="./offer_results.html" class="btn btn-primary pull-right" role="button">Submit</a>
 								</form>
 							</div>
-						</div>	
-					</div> -->
+						</div>
+					</div>
 				</div>			
 			</div>
 		</div>
